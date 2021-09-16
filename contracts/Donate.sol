@@ -1,0 +1,13 @@
+// SPDX-License-Identifier: UNLICENSED
+
+pragma solidity ^0.8.4;
+
+contract Donate {
+  uint totalDonations;
+  address payable owner;
+
+  constructor() {
+    owner = payable(msg.sender);
+  }
+
+}
