@@ -13,6 +13,10 @@ contract Donate {
   function getTotalDonations() view public returns(uint) {
     return totalDonations;
   }
-  
+
+  function donate() public payable {
+    (bool success,) = owner.call{value: msg.value}("");
+    require(success, "Failed to send money");
+  }
 
 }
