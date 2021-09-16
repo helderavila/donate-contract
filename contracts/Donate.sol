@@ -10,4 +10,9 @@ contract Donate {
     owner = payable(msg.sender);
   }
 
+  function getTotalDonations() view public returns(uint) {
+    return totalDonations;
+  }
+  
+
 }
